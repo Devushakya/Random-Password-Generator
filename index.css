@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Display Container */
+.display-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+input[data-passwordDisplay] {
+  flex: 1;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+button[copybtn] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button[copybtn]:hover {
+  background-color: #0056b3;
+}
+
+button[copybtn] p {
+  margin: 0;
+}
+
+/* Length Container */
+.length_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.length_container h1 {
+  font-size: 18px;
+  color: #333;
+}
+
+.length_container p {
+  font-size: 18px;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Slider */
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background-color: #007bff;
+  border-radius: 50%;
+}
+
+/* Checkboxes */
+div input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+div label {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Strength Container */
+.strength-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.strength-container p {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.strength-indicator {
+  width: 100px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  overflow: hidden; /* Ensure the indicator stays within bounds */
+}
+
+.strength-indicator .indicator {
+  height: 100%;
+  width: 0%; /* Start with 0% width, increase based on strength */
+  background-color: #ff4d4f; /* Default to red (weak) */
+  border-radius: 5px;
+  transition: width 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+/* Example states (these would be updated dynamically based on strength) */
+.strength-indicator.weak .indicator {
+  width: 33%;
+  background-color: #ff4d4f;
+}
+
+.strength-indicator.medium .indicator {
+  width: 66%;
+  background-color: #ffc107;
+}
+
+.strength-indicator.strong .indicator {
+  width: 100%;
+  background-color: #28a745;
+}
+
+
+/* Generate Button */
+.generate-button {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.generate-button:hover {
+  background-color: #218838;
+}
